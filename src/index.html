@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="../src/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="../src/output.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+        <title>Document</title>
+    
+    </head>
+        <body class=" ">
+        <!-- ======= Nav & Hero ======= -->
+        <header class="bg-white">
+            <!-- Nav Section -->
+            <nav class=" max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between space-y-5 lg:space-y-0 lg:items-center lg:p-3 py-5">
+                <div class="flex items-center justify-between px-5 h-16 bg-white lg:bg-transparent">
+                    <a href=""><img class="w-[150px]" src="../assets/logo.png" alt=""></a>
+                    <i class="ri-menu-line lg:hidden left-4 text-xl top-9"></i>
+                </div>
+
+                <ul class="flex flex-col lg:flex-row items-center space-y-10 lg:gap-x-16 lg:space-y-0 text-black font-semibold">
+                    <li class="text-md"><a href="">Beranda</a></li>
+                    <li class="text-md"><a href="">Data Laporan</a></li>
+                    <li class="text-md"><a href="">Hasil Kerja</a></li>
+                </ul>
+
+                <div class="space-x-5 flex items-center justify-center">
+                    <button class="uppercase bg-accent-tertiary text-white px-5 font-semibold h-12" onclick="toggleLogin()">Masuk</button>
+                    <button class="uppercase bg-transparent border px-6 font-semibold h-12">Daftar</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- ====== Login Popup ======= -->
+        <div class="form-login left-[10%] md:left-[30%] lg:left-[40%] transition-all duration-500" id="form-login">
+            <div class="login-overlay"></div>
+            <div class="login-content bg-white h-auto w-[400px] px-8 py-10 rounded">
+
+                <button class="close-btn text-2xl hover:cursor-pointer" onclick="toggleLogin()">&times;</button>
+    
+                <h1 class="text-center font-semibold text-2xl">LOGIN</h1>
+    
+                <hr class="mt-5 mb-5">    
+    
+                <form>
+    
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" class="w-full px-2 mt-2 py-2 rounded-sm mb-3 border-gray-300 border focus:outline-accent">
+    
+                    <br>
+                    
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" class="w-full px-2 mt-2 py-2 rounded-sm border-gray-300 border focus:outline-accent">
+    
+                    <div class="flex justify-between mt-3 mb-2">
+                        <div class="flex gap-2">
+                            <input type="checkbox" name="rememberMe" id="rememberMe" class="hover:cursor-pointer">
+                            <label for="rememberMe" class="hover:cursor-pointer">Remember Me</label>
+                        </div>
+                        <a href="youtube.com" class="text-red-500 underline hover:no-underline hover:cursor-pointer">Lupa Password?</a>
+                    </div>
+    
+                    <input type="submit" value="LOGIN" class="btn bg-red-600 transition-all duration-200 text-white w-full py-2 my-2 hover:cursor-pointer border hover:bg-white hover:border-red-600 hover:text-red-600">
+    
+                </form>
+    
+                <div class="flex justify-between mt-4 mb-5 w-full" style="align-items: center;">
+                    <hr class="border-gray-200 border w-[25%]">
+    
+                    <p>Or Login With</p>
+    
+                    <hr class="border-gray-200 border w-[25%]">
+                </div>
+    
+                <div class="row">
+    
+                    <button class="border-red-600 duration-200 border col-span-3 w-[32%] py-2 rounded-md text-red-600 hover:text-white hover:bg-red-600 transition hover:border-none"><i class="fa-brands fa-google"></i></button>
+    
+                    <button class="border-blue-600 duration-200 border col-span-3 w-[32%] py-2 rounded-md text-blue-600 hover:text-white hover:bg-blue-600 transition hover:border-none"><i class="fa-brands fa-facebook-f"></i></button>
+    
+                    <button class="border-gray-600 duration-200 border col-span-3 w-[32%] py-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-600 transition hover:border-none"><i class="fa-brands fa-x-twitter"></i></button>
+    
+                </div>
+    
+            </div>
+        </div>
+        <!-- ====== End Login ======= -->
+
+        <!-- ======= Main Section ======= -->
+        <main class="h-[1500px]" >
+            <!-- Hero Section -->
+             <div class="bg-[url(../assets/heroSection.png)] bg-no-repeat bg-cover bg-center">
+                <section class="max-w-7xl mx-auto h-[32rem] text-center items-center place-content-center">
+                    <div class="text-center space-y-3 text-white p-5">
+                        <h1 class="text-[2rem] lg:text-[3rem] leading-[120%] font-bold">Laporkan, Perbaiki, <br> Bersama Membangun Negeri</h1>
+                        <h3 class="text-[.8rem] lg:text-[1.2rem] text-[#e2e2e2] font-light">Dengarkan suara rakyat, tangani masalah nyata. Laporkan kondisi di sekitar Anda untuk Indonesia yang lebih baik dan
+                        berkelanjutan</h3>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- Data Statistik -->
+            <section class="bg-white max-w-7xl mx-auto shadow-lg mt-[-70px] h-auto flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-evenly p-5 py-6 text-center
+            font-semibold">
+                <div class="">
+                    <h2 class="text-[48px] font-bold text-accent-tertiary">38</h2>
+                    <p>Provinsi</p>
+                </div>
+                <div class="">
+                    <h2 class="text-[48px] font-bold text-accent-tertiary">125</h2>
+                    <p>Kabupaten</p>
+                </div>
+                <div class="">
+                    <h2 class="text-[48px] font-bold text-accent-tertiary">80</h2>
+                    <p>Kota</p>
+                </div>
+                <div class="">
+                    <h2 class="text-[48px] font-bold text-accent-tertiary">210</h2>
+                    <p>Kelurahan</p>
+                </div>
+            </section>
+            
+            <section class="mt-20 max-w-7xl mx-auto">
+                <h3 class="text-center text-[42px] font-semibold">Dampak</h3>
+                <div class="flex flex-col lg:flex-row mt-5 gap-5">
+                    <div class="bg-[url(../assets/header.jpg)] bg-cover bg-center shadow-xl w-full lg:w-1/3 h-[500px] border text-left rounded-l-xl flex flex-col justify-end
+                    text-white">
+                        <div class="bg-gradient-to-t from-black p-10 space-y-2 rounded-bl-xl">
+                            <h4 class="text-2xl font-semibold ">Infrastruktur</h4>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus qui sit, illo nisi itaque ab quasi,
+                                inventore expedita nobis</p>
+                        </div>
+                    </div>
+                    <div class="bg-[url(../assets/keamanan.webp)] bg-cover bg-center shadow-xl w-full lg:w-1/3 h-[500px] border text-left flex flex-col justify-end
+                    text-white">
+                        <div class="bg-gradient-to-t from-black p-10 space-y-2 ">
+                            <h4 class="text-2xl font-semibold ">Keamanan</h4>
+                            <p class="text-sm">Dengan adanya platfom kami, masyarakat dapat dengan cepat melaporkan potensi ancaman Keamanan</p>
+                        </div>
+                    </div>
+                    <div class="bg-[url(../assets/kebersihan.jpg)] bg-cover bg-center shadow-xl w-full lg:w-1/3 h-[500px] border text-left rounded-r-xl flex flex-col justify-end
+                                        text-white">
+                        <div class="bg-gradient-to-t from-black p-10 space-y-2 rounded-br-xl">
+                            <h4 class="text-2xl font-semibold ">Kebersihan</h4>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus qui sit, illo nisi itaque ab
+                                quasi,
+                                inventore expedita nobis</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- Form Laporan
+             <section class="bg-white shadow-xl max-w-6xl mx-auto p-10 mt-[-100px]">
+                <h2 class="bg-accent-tertiary text-white p-3 font-bold text-2xl">Form Laporan</h2>
+                <form action="" class="flex flex-col space-y-4 mt-5">
+                    <label class="text-lg">Nama Lengkap</label>
+                    <input type="text" placeholder="Ketik Nama Lengkap" class="border border-1 p-3 rounded-sm">
+                    <label class="text-lg">Nomor KTP</label>    
+                    <input type="text" placeholder="Ketik Nomor KTP" class="border border-1 p-3 rounded-sm">
+                    <label class="text-lg">Daerah</label>
+                    <input type="text" placeholder="Ketik Daerah" class="border border-1 p-3 rounded-sm">
+                    <label class="text-lg">Divisi</label>
+                    <input type="text" placeholder="Ketik Divisi" class="border border-1 p-3 rounded-sm">
+                    <label class="text-lg">Isi Laporan</label>
+                    <textarea placeholder="Ketik Isi Laporan" class="border border-1 p-3 rounded-sm" cols="50"></textarea>
+                </form>
+             </section> -->
+        </main>
+        
+        <!-- ======= Footer ======= -->
+        <footer class="">
+            
+        </footer>
+
+    </body>
+
+    <script defer src="main.js"></script>
+    <script src="https://kit.fontawesome.com/fb890e3537.js" crossorigin="anonymous"></script>
+</html>
