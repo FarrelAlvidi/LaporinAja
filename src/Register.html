@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="../src/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <title>Document</title>
+
+    </head>
+    <body class="  lg:min-h-[150vh] bg-[url(../assets/bg2.jpg)] bg-cover bg-center bg-no-repeat transition-all duration-75 ">
+      <header>
+        <nav class=" border-gray-200 shadow-md bg-white" x-data="{ open: false }">
+        
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="../assets/logo.png" class="h-8" alt="Flowbite Logo" />
+            </a>
+        
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+              <div class="hidden space-x-5 lg:flex items-center justify-center">
+                <button class="uppercase bg-red-700 text-white px-5 font-semibold h-12 hover:bg-red-800 transition-all"
+                  onclick="toggleLogin()">Masuk</button>
+                <button
+                  class="uppercase bg-transparent border px-6 font-semibold h-12 hover:bg-red-700 hover:text-white transition-all"><a
+                    href="Register.html">Daftar</a></button>
+              </div>
+        
+              <button data-collapse-toggle="navbar-cta" type="button"
+                class="items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden inline-flex hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400 hover:bg-gray-200 focus:ring-gray-200"
+                aria-controls="navbar-cta" aria-expanded="false">
+        
+                <svg @click="open = ! open" class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+              </button>
+            </div>
+        
+            <!-- Mobile Nav -->
+            <div x-show="open" class="items-center justify-between block sm:hidden w-full md:w-auto md:order-1" id="navbar-cta">
+              <ul
+                class="flex flex-col font-medium space-y-3 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                <li>
+                  <a href="index.html"
+                    class="block py-2 px-3 md:p-0 text-red-700 bg-gray-200 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                    aria-current="page">Beranda</a>
+                </li>
+                <li>
+                  <a href="dataLaporan.html"
+                    class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Data
+                    Laporan</a>
+                </li>
+                <li>
+                  <a href="lapor.html"
+                    class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Lapor</a>
+                </li>
+                <div class="space-x-5 flex items-center justify-left">
+                  <button class="uppercase bg-red-700 text-white px-5 font-semibold h-12 hover:bg-red-800 transition-all"
+                    onclick="toggleLogin()">Masuk</button>
+                  <button
+                    class="uppercase bg-transparent border px-6 font-semibold h-12 hover:bg-red-700 hover:text-white transition-all">Daftar</button>
+                </div>
+              </ul>
+        
+        
+            </div>
+        
+            <!-- Desktop Nav -->
+            <div class="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1" id="navbar-cta">
+              <ul
+                class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+                <li>
+                  <a href="index.html" class="block py-2 px-3 md:p-0    text-red-700 rounded" aria-current="page">Beranda</a>
+                </li>
+                <li>
+                  <a href="dataLaporan.html" class="block py-2 px-3 md:p-0 text-gray-900 hover:text-red-600 duration-300">Data
+                    Laporan</a>
+                </li>
+                <li>
+                  <a href="lapor.html" class="block py-2 px-3 md:p-0 text-gray-900 hover:text-red-600 duration-300">Lapor</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+      <div class="max-w-7xl mx-auto bg-white px-10 mt-32 pb-10 rounded-sm sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] transition-all duration-75">
+        <h2 class="text-3xl font-semibold mb-3 text-center">REGISTER</h2>
+        <div class="center-div-grid w-full">
+          <form class="bg-white w-full h-auto rounded-sm border border-gray-200" id="form">
+            <div class="grid grid-cols-1 gap-x-3 gap-y-4 sm:grid-cols-6 p-10">
+                <div class="col-span-3">
+                  <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
+                  <div class="mt-1">
+                    <input type="text" name="username" id="username" autocomplete="given-name" class="block w-full rounded-sm border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>    
+                </div>
+        
+                <div class="col-span-3">
+                  <label for="name-lengkap" class="block text-sm font-medium leading-6 text-gray-900">Nama Lengkap</label>
+                  <div class="mt-1">
+                    <input type="text" name="name-lengkap" id="name-lengkap" autocomplete="family-name" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>
+                </div>
+        
+                <div class="col-span-full">
+                  <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                  <div class="mt-1 w-full">
+                    <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>
+                </div>
+        
+                <!-- <div class="col-span-full">
+                  <label for="alamat" class="block text-sm font-medium leading-6 text-gray-900">Alamat</label>
+                  <div class="mt-1 w-full">
+                    <input type="text" name="alamat" id="alamat" autocomplete="alamat" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>
+                </div>     -->
+  
+                <!-- <div class="col-span-3">
+                  <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Provinsi</label>
+                  <div class="mt-1 w-[100%]">
+                    <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                      <option selected>Provinsi</option>
+                      <option>Canada</option>
+                      <option>Mexico</option>
+                    </select>
+                  </div>
+                </div>
+  
+                <div class="col-span-3">
+                  <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Kecamatan</label>
+                  <div class="mt-1 w-full">
+                    <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                      <option selected>Kecamatan</option>
+                      <option>Canada</option>
+                      <option>Mexico</option>
+                    </select>
+                  </div>
+                </div>
+  
+                <div class="col-span-3">
+                  <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Kota/Kabupaten</label>
+                  <div class="mt-1 w-full">
+                    <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                      <option selected>Kota/Kabupaten</option>
+                      <option>Canada</option>
+                      <option>Mexico</option>
+                    </select>
+                  </div>
+                </div>
+        
+                <div class="col-span-3">
+                  <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">Kode Pos</label>
+                  <div class="mt-1">
+                    <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>
+                </div> -->
+  
+                <div class="col-span-full">
+                  <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Kata Sandi</label>
+                  <div class="mt-1 w-full">
+                    <input id="password" name="password" type="password" autocomplete="password" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>
+                </div>
+  
+                <div class="col-span-full">
+                  <label for="confirm-password" class="block text-sm font-medium leading-6 text-gray-900">Konfirmasi Sandi</label>
+                  <div class="mt-1 w-full">
+                    <input id="confirm-password" name="confirm-password" type="password" autocomplete="confirm-password" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>
+                </div>
+  
+                <div class="col-span-3">
+                  <label for="tanggal-lahir" class="block text-sm font-medium leading-6 text-gray-900">Tanggal Lahir</label>
+                  <div class="mt-1 w-full">
+                    <input id="tanggal-lahir" name="tanggal-lahir" type="date" autocomplete="tanggal-lahir" class="block w-full rounded-sm border-0  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  </div>
+                </div>
+  
+                <div class="col-span-3">
+                  <label for="kelamin" class="block text-sm font-medium leading-6 text-gray-900">Jenis Kelamin</label>
+                  <div class="mt-1 w-full">
+                    <select id="kelamin" name="kelamin" autocomplete="kelamin" class="block w-full rounded-sm border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                      <option selected>---</option>
+                      <option>Laki-laki</option>
+                      <option>Perempuan</option>
+                      <option>Custom</option>
+                    </select>
+                  </div>
+                </div>
+  
+                <div class="col-span-full center-div-grid">
+                  <div class="w-full sm:w-[50%] md:w-[50%] lg:w-[40%] flex justify-between border-gray-300 mt-4 border gap-5 px-4 py-2" style="align-items: center;">
+                    <div class="flex gap-2" style="align-items: center;">
+                      <input type="checkbox" id="captcha">
+                      <p class="text-xs">I'm not a Robot</p>
+                    </div>
+  
+                    <div>
+                      <img src="../assets/RecaptchaLogo.svg.png" alt="RecaptchaLogo" width="50">
+                    </div>
+                    
+                  </div>
+                </div>
+  
+                <div class="col-span-full center-div-grid mt-3">
+                  <input type="submit" value="Sign Up" class="bg-red-500 text-white text-sm w-full font-semibold px-7 py-3 cursor-pointer rounded-sm bg-gradient-to-r from-red-500 to-red-600">
+                </div>
+  
+              </div>
+          </form> 
+        </div>
+        
+      </div>
+        
+    </body>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/fb890e3537.js" crossorigin="anonymous"></script>
+    <script>
+      const form = document.getElementById("form");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          window.location.href = "indexLoggedin.html";
+        })
+    </script>
+</html>
