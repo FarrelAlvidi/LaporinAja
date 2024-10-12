@@ -85,9 +85,9 @@
                         <!-- Desktop Nav -->
                         <div class="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1" id="navbar-cta">
                             <ul
-                                class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+                                class="mr-20 flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
                                 <li>
-                                    <a href="indexLoggedin.html" class="block py-2 px-3 md:p-0    text-red-700 rounded"
+                                    <a href="indexLoggedin.html" class="block py-2 px-3 md:p-0   text-gray-900  rounded"
                                         aria-current="page">Beranda</a>
                                 </li>
                                 <li>
@@ -97,7 +97,7 @@
                                 </li>
                                 <li>
                                     <a href="lapor.html"
-                                        class="block py-2 px-3 md:p-0 text-gray-900 hover:text-red-600 duration-300">Lapor</a>
+                                        class="block py-2 px-3 md:p-0 text-red-700 hover:text-red-600 duration-300">Lapor</a>
                                 </li>
                             </ul>
                         </div>
@@ -129,14 +129,14 @@
                 <label class="text-lg">Nama Lengkap</label>
                 <input type="text" placeholder="Ketik Nama Lengkap" class="border border-1 p-3 rounded-sm" id="nama-lengkap">
 
-                <label class="text-lg">Nomor KTP</label>
-                <input type="textx`" placeholder="Ketik Nomor KTP" class="border border-1 p-3 border-black rounded-sm">
+                <label class="text-lg">NIK</label>
+                <input type="text" placeholder="Ketik Nomor NIK" class="border border-1 p-3 border-black rounded-sm" id="nik">
                 
                 <label class="text-lg">Daerah</label>
                 <input type="text" placeholder="Ketik Daerah" class="border border-1 p-3 rounded-sm" id="daerah">
 
-                <label class="text-lg">Kota</label>
-                <input type="text" placeholder="Ketik Divisi" class="border border-1 p-3 rounded-sm" id="kota">
+                <label class="text-lg">Foto Permasalahan</label>
+                <input type="file" placeholder="Masukkan Foto" class="border border-1 border-black p-3 rounded-sm" id="kota">
 
                 <label class="text-lg">Isi Laporan</label>
                 <textarea placeholder="Ketik Isi Laporan" class="border border-1 p-3 rounded-sm" cols="50" id="isi-laporan"></textarea>
@@ -150,6 +150,7 @@
         <script>
             const form = document.getElementById("form-lapor");
             const namaLengkap = document.getElementById("nama-lengkap");
+            const nik = document.getElementById("nik");
             const daerah = document.getElementById("daerah");
             const kota = document.getElementById("kota");
             const isiLaporan = document.getElementById("isi-laporan");
@@ -158,11 +159,13 @@
                 e.preventDefault();
             
                 const nlValue = namaLengkap.value;
+                const nikValue = nik.value;
                 const daerahValue = daerah.value;
                 const kotaValue = kota.value;
                 const ilValue = isiLaporan.value;
             
                 localStorage.setItem('nl', nlValue);
+                localStorage.setItem('nik', nikValue);
                 localStorage.setItem('daerah', daerahValue);
                 localStorage.setItem('kota', kotaValue);
                 localStorage.setItem('il', ilValue);
